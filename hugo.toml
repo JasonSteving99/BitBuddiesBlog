@@ -4,7 +4,7 @@ title = 'BitBuddies Blog'
 theme = 'bitbuddies'
 
 [params]
-  description = "Technical deep dives on building BitBuddies"
+  description = "Engineering blog from the BitBuddies team"
   author = "BitBuddies Team"
   favicon = ""
   site_logo = ""
