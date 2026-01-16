@@ -1,38 +1,64 @@
 baseURL = 'https://jasonsteving99.github.io/BitBuddiesBlog/'
 languageCode = 'en-us'
-title = 'BitBuddies Blog'
-theme = 'bitbuddies'
+theme = 'terminal'
+paginate = 5
 
 [params]
-  description = "Engineering blog from the BitBuddies team"
-  author = "BitBuddies Team"
-  favicon = ""
-  site_logo = ""
+  contentTypeName = "posts"
+  showMenuItems = 3
+  fullWidthTheme = false
+  centerTheme = true
+  readingTime = true
+  Toc = false
 
-  # Show reading time
-  show_reading_time = true
+[params.logo]
+  logoText = "BitBuddies Blog"
+  logoHomeLink = "/"
 
-  # Social media links
-  linkedin = "https://www.linkedin.com/in/jasonsteving"
+[[params.social]]
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/jasonsteving"
 
-[menu]
-  [[menu.main]]
-    identifier = "posts"
-    name = "Posts"
-    url = "/posts/"
-    weight = 10
+[languages]
+  [languages.en]
+    languageName = "English"
+    title = "BitBuddies Blog"
 
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 20
+    [languages.en.params]
+      subtitle = "Engineering insights from building BitBuddies"
+      owner = "Jason Steving"
+      keywords = "bitbuddies, temporal, ai, engineering, blog"
+      copyright = "Jason Steving"
+      menuMore = "Show more"
+      readMore = "Read more"
+      readOtherPosts = "Read other posts"
+      newerPosts = "Newer posts"
+      olderPosts = "Older posts"
+      missingContentMessage = "Page not found..."
+      missingBackButtonLabel = "Back to home page"
+      minuteReadingTime = "min read"
+      words = "words"
+
+    [languages.en.params.logo]
+      logoText = "BitBuddies Blog"
+      logoHomeLink = "/"
+
+    [[languages.en.menu.main]]
+      identifier = "about"
+      name = "About"
+      url = "/about"
+      weight = 1
+
+    [[languages.en.menu.main]]
+      identifier = "posts"
+      name = "Posts"
+      url = "/posts"
+      weight = 2
 
 [markup]
   [markup.highlight]
+    noClasses = false
     style = 'monokai'
-    lineNos = true
-    lineNumbersInTable = true
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
