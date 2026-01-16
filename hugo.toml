@@ -13,7 +13,6 @@ theme = 'bitbuddies'
   show_reading_time = true
 
   # Social media links
-  github = "https://github.com/JasonSteving99/BitBuddiesBlog"
   linkedin = "https://www.linkedin.com/in/jasonsteving"
 
 [menu]
