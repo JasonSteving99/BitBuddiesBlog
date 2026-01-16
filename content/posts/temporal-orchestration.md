@@ -6,10 +6,6 @@ tags: ["temporal", "ai", "orchestration", "python", "workflow"]
 categories: ["engineering", "backend"]
 author: "Jason Steving"
 description: "Learn how Temporal's durable execution model orchestrates multiple AI models, handles failures gracefully, and ensures users never get double-charged."
-cover:
-    image: ""
-    alt: "BitBuddies Animation Pipeline"
-    relative: false
 ---
 
 ## The Problem: Orchestrating Chaos

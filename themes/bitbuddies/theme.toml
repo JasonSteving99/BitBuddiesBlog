@@ -1,7 +1,0 @@
-name = "BitBuddies"
-license = "MIT"
-description = "A clean, minimal theme for technical blogs"
-min_version = "0.112.0"
-
-[author]
-  name = "BitBuddies Team"
