@@ -1,0 +1,8 @@
+<footer class="site-footer">
+    <div class="container">
+        <p>&copy; {{ now.Year }} {{ .Site.Title }}. Built with <a href="https://gohugo.io/">Hugo</a>.</p>
+        {{ if .Site.Params.github }}
+        <p><a href="{{ .Site.Params.github }}">GitHub</a></p>
+        {{ end }}
+    </div>
+</footer>

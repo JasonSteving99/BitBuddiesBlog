@@ -1,0 +1,38 @@
+baseURL = 'https://jasonsteving99.github.io/BitBuddiesBlog/'
+languageCode = 'en-us'
+title = 'BitBuddies Blog'
+theme = 'bitbuddies'
+
+[params]
+  description = "Technical deep dives on building BitBuddies"
+  author = "BitBuddies Team"
+  favicon = ""
+  site_logo = ""
+
+  # Show reading time
+  show_reading_time = true
+
+  # Social media links
+  github = "https://github.com/JasonSteving99/BitBuddiesBlog"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 20
+
+[markup]
+  [markup.highlight]
+    style = 'monokai'
+    lineNos = true
+    lineNumbersInTable = true
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

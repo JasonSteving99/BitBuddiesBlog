@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div class="container">
+    <div class="hero">
+        <h1>{{ .Site.Title }}</h1>
+        <p>{{ .Site.Params.description }}</p>
+    </div>
+
+    <div class="posts">
+        <h2>Latest Posts</h2>
+        {{ $pages := where .Site.RegularPages "Type" "posts" }}
+        {{ range first 10 $pages }}
+        <article class="post-preview">
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            {{ if .Date }}
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            {{ end }}
+            {{ if .Description }}
+            <p>{{ .Description }}</p>
+            {{ else }}
+            <p>{{ .Summary }}</p>
+            {{ end }}
+            <a href="{{ .RelPermalink }}" class="read-more">Read more →</a>
+        </article>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
