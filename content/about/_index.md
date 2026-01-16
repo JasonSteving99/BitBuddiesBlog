@@ -6,23 +6,14 @@ draft: false
 
 ## About BitBuddies
 
-BitBuddies is an innovative application that transforms photos into animated transparent characters using cutting-edge AI technology.
+BitBuddies transforms your photos into animated transparent characters using AI. Upload a photo and get a custom animated sprite in under 5 minutes.
 
-### What We Do
-
-Upload a photo, and our AI pipeline orchestrates multiple models to:
-- Filter and validate your image
-- Generate a cartoon version
-- Create segmentation masks
-- Produce a 5-second animation
-- Deliver a transparent animated sprite
-
-### The Technology
-
-We use [Temporal](https://temporal.io) to orchestrate a complex pipeline of AI models, ensuring reliability, automatic refunds on failures, and real-time progress updates.
-
-Check out our technical blog posts to learn more about how we build BitBuddies!
+Use your Bit Buddy as a profile picture, in videos, or install the Chrome extension to have it run across all your web pages.
 
 ### Try It
 
-Visit [bitbuddies.app](https://bitbuddies.app) to create your own animated character in under 5 minutes.
+Visit [bitbuddies.app](https://bitbuddies.app) to create your own animated character.
+
+---
+
+This blog shares engineering stories and technical insights from building BitBuddies.
