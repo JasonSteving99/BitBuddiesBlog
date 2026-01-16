@@ -57,7 +57,7 @@ paginate = 5
 
 [markup]
   [markup.highlight]
-    noClasses = false
+    noClasses = true
     style = 'monokai'
   [markup.goldmark]
     [markup.goldmark.renderer]
