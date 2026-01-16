@@ -58,7 +58,7 @@ paginate = 5
 [markup]
   [markup.highlight]
     noClasses = true
-    style = 'monokai'
+    style = 'doom-one'
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
