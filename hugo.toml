@@ -58,7 +58,7 @@ paginate = 5
 [markup]
   [markup.highlight]
     noClasses = true
-    style = 'doom-one'
+    style = 'github-dark'
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
