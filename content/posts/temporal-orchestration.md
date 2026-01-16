@@ -4,7 +4,7 @@ date: 2026-01-16T11:00:00-00:00
 draft: false
 tags: ["temporal", "ai", "orchestration", "python", "workflow"]
 categories: ["engineering", "backend"]
-author: "BitBuddies Team"
+author: "Jason Steving"
 description: "Learn how Temporal's durable execution model orchestrates multiple AI models, handles failures gracefully, and ensures users never get double-charged."
 cover:
     image: ""

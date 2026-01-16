@@ -14,6 +14,7 @@ theme = 'bitbuddies'
 
   # Social media links
   github = "https://github.com/JasonSteving99/BitBuddiesBlog"
+  linkedin = "https://www.linkedin.com/in/jasonsteving"
 
 [menu]
   [[menu.main]]

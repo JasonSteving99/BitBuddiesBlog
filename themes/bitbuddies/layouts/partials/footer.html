@@ -1,8 +1,13 @@
 <footer class="site-footer">
     <div class="container">
         <p>&copy; {{ now.Year }} {{ .Site.Title }}. Built with <a href="https://gohugo.io/">Hugo</a>.</p>
-        {{ if .Site.Params.github }}
-        <p><a href="{{ .Site.Params.github }}">GitHub</a></p>
-        {{ end }}
+        <p class="social-links">
+            {{ if .Site.Params.github }}
+            <a href="{{ .Site.Params.github }}">GitHub</a>
+            {{ end }}
+            {{ if .Site.Params.linkedin }}
+            <a href="{{ .Site.Params.linkedin }}">LinkedIn</a>
+            {{ end }}
+        </p>
     </div>
 </footer>
