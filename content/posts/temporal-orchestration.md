@@ -212,7 +212,7 @@ Temporal is going to make this delightfully straightforward: long-running workfl
 
 ## Try It Yourself
 
-Want to see this in action? Head to **[bitbuddies.app](https://bitbuddies.app)** and generate your own animated character in under 5 minutes. Upload a photo, watch the pipeline work its magic, and get a transparent animated sprite you can use anywhere. With the Chrome extension, your Bit Buddy can run across all your web pages, following you around the internet.
+Want to see this in action? Head to **[bitbuddies.app](https://bitbuddies.app)** and generate your own animated character in under 5 minutes. Upload a photo, watch the pipeline work its magic, and get an animated Bit Buddy that you can use anywhere. With the Chrome extension, your Bit Buddy can even run across all your web pages, joining you around the internet!
 
 And if something breaks? Don't worry — Temporal's got your back. (And my phone will buzz.) 
 
