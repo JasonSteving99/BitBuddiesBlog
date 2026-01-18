@@ -8,7 +8,7 @@ author: "Jason Steving"
 description: "Learn how Temporal's durable execution model orchestrates multiple AI models, handles failures gracefully, and ensures users never get double-charged."
 ---
 
-[BitBuddies](https://bitbuddies.app) turns any of your photos into an animated character — upload an image and prompt, get back an character that can join you across the web.
+[BitBuddies](https://bitbuddies.app) turns any of your photos into an animated character — upload an image and prompt, get back a character that can join you across the web.
 
 <video autoplay loop muted playsinline style="width: 100%; max-width: 800px; margin: 2rem auto; display: block;">
   <source src="/BitBuddiesBlog/posts/temporal-orchestration/generate-bit-buddy-demo.mp4" type="video/mp4">
