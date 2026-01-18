@@ -11,7 +11,7 @@ description: "Learn how Temporal's durable execution model orchestrates multiple
 [BitBuddies](https://bitbuddies.app) turns any of your photos into an animated character — upload an image and prompt, get back a character that can join you across the web.
 
 <video autoplay loop muted playsinline style="width: 100%; max-width: 800px; margin: 2rem auto; display: block;">
-  <source src="/BitBuddiesBlog/posts/temporal-orchestration/generate-bit-buddy-demo.mp4" type="video/mp4">
+  <source src="/posts/temporal-orchestration/generate-bit-buddy-demo.mp4" type="video/mp4">
 </video>
 
 ## The Problem: Orchestrating Chaos
@@ -27,7 +27,7 @@ The beauty of Temporal is how it handles all this complexity while ensuring user
 Temporal makes these guarantees straightforward to implement and reason about.
 
 <video autoplay loop muted playsinline style="width: 100%; max-width: 400px; margin: 2rem auto; display: block; background: transparent;">
-  <source src="/BitBuddiesBlog/posts/temporal-orchestration/world-turtle.webm" type="video/webm">
+  <source src="/posts/temporal-orchestration/world-turtle.webm" type="video/webm">
 </video>
 
 ## The Core Pattern: Durable Promises
@@ -201,7 +201,7 @@ Workers HTTP POST to the API server, which fans out via Server-Sent Events to br
 ## What's Next: Physical Stickers!
 
 <video autoplay loop muted playsinline style="width: 100%; max-width: 800px; margin: 2rem auto; display: block;">
-  <source src="/BitBuddiesBlog/posts/temporal-orchestration/BitBuddiesStickerDemo-720p30fps.mp4" type="video/mp4">
+  <source src="/posts/temporal-orchestration/BitBuddiesStickerDemo-720p30fps.mp4" type="video/mp4">
 </video>
 
 The next big feature is **physical sticker generation**. Soon you'll be able to order physical stickers of your Bit Buddy and slap them on your laptop, water bottle, or Temporal conference badge. The best part? Each sticker includes a QR code that, when scanned, brings your Bit Buddy to life with its full animation.
@@ -215,5 +215,5 @@ Want to see this in action? Head to **[bitbuddies.app](https://bitbuddies.app)**
 And if something breaks? Don't worry — Temporal's got your back. (And my phone will buzz.) 
 
 <video autoplay loop muted playsinline style="width: 100%; max-width: 400px; margin: 2rem auto; display: block; background: transparent;">
-  <source src="/BitBuddiesBlog/posts/temporal-orchestration/milo-sample.webm" type="video/webm">
+  <source src="/posts/temporal-orchestration/milo-sample.webm" type="video/webm">
 </video>

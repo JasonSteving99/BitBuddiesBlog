@@ -1,4 +1,4 @@
-baseURL = 'https://jasonsteving99.github.io/BitBuddiesBlog/'
+baseURL = 'https://blog.bitbuddies.app/'
 languageCode = 'en-us'
 theme = 'terminal'
 
@@ -15,7 +15,7 @@ theme = 'terminal'
 
 [params.logo]
   logoText = "BitBuddies Blog"
-  logoHomeLink = "/BitBuddiesBlog"
+  logoHomeLink = "/"
 
 [[params.social]]
   name = "linkedin"
@@ -43,7 +43,7 @@ theme = 'terminal'
 
     [languages.en.params.logo]
       logoText = "BitBuddies Blog"
-      logoHomeLink = "/BitBuddiesBlog"
+      logoHomeLink = "/"
 
     [[languages.en.menu.main]]
       identifier = "about"
