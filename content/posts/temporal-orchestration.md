@@ -195,7 +195,7 @@ Workers HTTP POST to the API server, which fans out via Server-Sent Events to br
 1. **Split expensive operations into submit/poll/fetch** - Worker crashes shouldn't resubmit expensive jobs. Use heartbeat timeouts to detect stuck polling.
 2. **Use workflow.uuid4() for idempotency keys** - Deterministic UUIDs across retries eliminate an entire class of double-charging bugs.
 3. **Different retry policies for different activities** - Polling can retry forever with heartbeats. Billing should fail fast with limited attempts.
-4. **Wrapper workflows for cross-cutting concerns** - My `run_with_alert_on_failure` wrapper adds refunds and alerting to any workflow without duplicating code.
+4. **Durable error handling** - The `run_with_alert_on_failure` pattern ensures errors are handled reliably (refunds + alerts) even if the server crashes, thanks to Temporal's durable execution.
 5. **Semaphores for shared resources** - Standard concurrency primitives like semaphores for rate limiting work when you need to coordinate across workflow instances.
 6. **Hybrid approaches for non-critical side effects** - Progress updates can go through external pub/sub while critical operations stay in the workflow.
 7. **Leverage durable execution history** - Job IDs, state, and idempotency keys persist automatically across worker restarts.
