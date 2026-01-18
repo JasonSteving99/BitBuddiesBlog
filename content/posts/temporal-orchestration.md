@@ -173,10 +173,17 @@ For this use case, I went with a hybrid approach that combines Temporal's workfl
 
 ```python
 # From workflow activity:
-await workflow.execute_activity(
+# Fire-and-forget with start_activity (no await) - workflow continues 
+# immediately while update publishes in background
+workflow.start_activity(
     publish_progress_update,
     ProgressUpdate(workflow_id=workflow.info().workflow_id, step="Generating video"),
-    retry_policy=RetryPolicy(maximum_attempts=1)  # Don't block workflow if publish fails
+    retry_policy=RetryPolicy(
+        maximum_attempts=10,
+        # Very short retry interval - user's actively waiting, publish asap.
+        initial_interval=timedelta(seconds=1),
+        maximum_interval=timedelta(seconds=1),
+    ),
 )
 
 # FastAPI server maintains SSE connections:
