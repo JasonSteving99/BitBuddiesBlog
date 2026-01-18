@@ -1,6 +1,6 @@
 ---
 title: "Building BitBuddies: How Temporal Turned a Half Dozen (and Counting) AI Models Into a Reliable Animation Pipeline"
-date: 2026-01-16T11:00:00-00:00
+date: 2026-01-17T11:00:00-00:00
 draft: false
 tags: ["temporal", "ai", "orchestration", "python", "workflow"]
 categories: ["engineering", "backend"]
