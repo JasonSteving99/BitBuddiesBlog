@@ -1,7 +1,9 @@
 baseURL = 'https://jasonsteving99.github.io/BitBuddiesBlog/'
 languageCode = 'en-us'
 theme = 'terminal'
-paginate = 5
+
+[pagination]
+  pagerSize = 5
 
 [params]
   contentTypeName = "posts"
@@ -13,7 +15,7 @@ paginate = 5
 
 [params.logo]
   logoText = "BitBuddies Blog"
-  logoHomeLink = "/"
+  logoHomeLink = "/BitBuddiesBlog"
 
 [[params.social]]
   name = "linkedin"
@@ -41,7 +43,7 @@ paginate = 5
 
     [languages.en.params.logo]
       logoText = "BitBuddies Blog"
-      logoHomeLink = "/"
+      logoHomeLink = "/BitBuddiesBlog"
 
     [[languages.en.menu.main]]
       identifier = "about"

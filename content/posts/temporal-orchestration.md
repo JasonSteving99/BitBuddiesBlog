@@ -8,6 +8,12 @@ author: "Jason Steving"
 description: "Learn how Temporal's durable execution model orchestrates multiple AI models, handles failures gracefully, and ensures users never get double-charged."
 ---
 
+[BitBuddies](https://bitbuddies.app) turns any of your photos into an animated character — upload an image and prompt, get back an character that can join you across the web.
+
+<video autoplay loop muted playsinline style="width: 100%; max-width: 800px; margin: 2rem auto; display: block;">
+  <source src="/posts/temporal-orchestration/generate-bit-buddy-demo.mp4" type="video/mp4">
+</video>
+
 ## The Problem: Orchestrating Chaos
 
 Here's what happens when someone uploads a photo to [BitBuddies](https://bitbuddies.app): we need to wrangle a half dozen (and counting) different AI models in sequence, each with their own quirks, rate limits, and failure modes, to transform that image into an animated transparent character. Oh, and we need to charge them money *exactly once*, never lose their place if something crashes, and text me immediately if anything goes sideways.
@@ -19,6 +25,10 @@ Temporal is the perfect tool for this kind of challenge. The pipeline orchestrat
 The beauty of Temporal is how it handles all this complexity while ensuring users get automatic refunds if anything fails, and I get alerted on my phone with enough context to actually fix the problem.
 
 Temporal makes these guarantees straightforward to implement and reason about.
+
+<video autoplay loop muted playsinline style="width: 100%; max-width: 400px; margin: 2rem auto; display: block; background: transparent;">
+  <source src="/posts/temporal-orchestration/world-turtle.webm" type="video/webm">
+</video>
 
 ## The Core Pattern: Durable Promises
 
@@ -184,11 +194,15 @@ Workers HTTP POST to the API server, which fans out via Server-Sent Events to br
 2. **Use workflow.uuid4() for idempotency keys** - Deterministic UUIDs across retries eliminate an entire class of double-charging bugs.
 3. **Different retry policies for different activities** - Polling can retry forever with heartbeats. Billing should fail fast with limited attempts.
 4. **Wrapper workflows for cross-cutting concerns** - My `run_with_alert_on_failure` wrapper adds refunds and alerting to any workflow without duplicating code.
-5. **LRU cache for shared resources** - Global semaphores for rate limiting work beautifully when you need to coordinate across workflow instances.
+5. **Semaphores for shared resources** - Standard concurrency primitives like semaphores for rate limiting work when you need to coordinate across workflow instances.
 6. **Hybrid approaches for non-critical side effects** - Progress updates can go through external pub/sub while critical operations stay in the workflow.
 7. **Leverage durable execution history** - Job IDs, state, and idempotency keys persist automatically across worker restarts.
 
 ## What's Next: Physical Stickers!
+
+<video autoplay loop muted playsinline style="width: 100%; max-width: 800px; margin: 2rem auto; display: block;">
+  <source src="/posts/temporal-orchestration/BitBuddiesStickerDemo-720p30fps.mp4" type="video/mp4">
+</video>
 
 The next big feature is **physical sticker generation**. Soon you'll be able to order physical stickers of your Bit Buddy and slap them on your laptop, water bottle, or Temporal conference badge. The best part? Each sticker includes a QR code that, when scanned, brings your Bit Buddy to life with its full animation.
 
@@ -198,4 +212,8 @@ Temporal is going to make this delightfully straightforward: long-running workfl
 
 Want to see this in action? Head to **[bitbuddies.app](https://bitbuddies.app)** and generate your own animated character in under 5 minutes. Upload a photo, watch the pipeline work its magic, and get a transparent animated sprite you can use anywhere. With the Chrome extension, your Bit Buddy can run across all your web pages, following you around the internet.
 
-And if something breaks? Don't worry—Temporal's got your back. (And my phone will buzz.)
+And if something breaks? Don't worry — Temporal's got your back. (And my phone will buzz.) 
+
+<video autoplay loop muted playsinline style="width: 100%; max-width: 400px; margin: 2rem auto; display: block; background: transparent;">
+  <source src="/posts/temporal-orchestration/milo-sample.webm" type="video/webm">
+</video>
