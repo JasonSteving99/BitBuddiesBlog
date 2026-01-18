@@ -20,7 +20,7 @@ Here's what happens when someone uploads a photo to [BitBuddies](https://bitbudd
 
 No big deal, right?
 
-Temporal is the perfect tool for this kind of challenge. The pipeline orchestrates a sequence of AI models: one filters NSFW content, another analyzes orientation and validates outputs, a third generates cartoon versions (sometimes twice for full-body expansion), another creates segmentation masks for both images and video, yet another generates 5-second animations, and finally ffmpeg transcodes and streams gigabytes directly to cloud storage.
+[Temporal](https://temporal.io/) is the perfect tool for this kind of challenge. The pipeline orchestrates a sequence of AI models: one filters NSFW content, another analyzes orientation and validates outputs, a third generates cartoon versions (sometimes twice for full-body expansion), another creates segmentation masks for both images and video, yet another generates 5-second animations, and finally ffmpeg transcodes and streams gigabytes directly to cloud storage.
 
 Without Temporal, we'd be building our own distributed, fault-tolerant state machine, tracking job IDs in a database, writing retry logic for every step, and praying nothing crashes between charging a user and completing their generation. 
 
