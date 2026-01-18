@@ -22,6 +22,8 @@ No big deal, right?
 
 Temporal is the perfect tool for this kind of challenge. The pipeline orchestrates a sequence of AI models: one filters NSFW content, another analyzes orientation and validates outputs, a third generates cartoon versions (sometimes twice for full-body expansion), another creates segmentation masks for both images and video, yet another generates 5-second animations, and finally ffmpeg transcodes and streams gigabytes directly to cloud storage.
 
+Without Temporal, we'd be building our own distributed, fault-tolerant state machine, tracking job IDs in a database, writing retry logic for every step, and praying nothing crashes between charging a user and completing their generation. 
+
 The beauty of Temporal is how it handles all this complexity while ensuring users get automatic refunds if anything fails, and I get alerted on my phone with enough context to actually fix the problem.
 
 Temporal makes these guarantees straightforward to implement and reason about.
@@ -83,7 +85,7 @@ Now when something breaks at 2 AM, I wake up to a Pushover notification with a d
 
 ### Challenge 1: Don't Re-run Expensive AI Calls
 
-When you submit a video generation job to FAL AI, it costs money and takes 2-3 minutes. If my worker crashes mid-polling, I *absolutely cannot* resubmit that job. This is one of those problems that keeps you up at night in a traditional system: how do you maintain the connection to a long-running external job when your process might die at any moment?
+When we submit a video generation job to the model API, it costs money and takes 2-3 minutes. If my worker crashes mid-polling, I *absolutely cannot* resubmit that job. This is one of those problems that keeps you up at night in a traditional system: how do you maintain the connection to a long-running external job when your process might die at any moment?
 
 Temporal makes this elegant with a three-activity pattern:
 
@@ -110,7 +112,7 @@ Without Temporal, you'd need to build a separate job tracking system with a data
 
 ### Challenge 2: Rate Limiting Across Concurrent Workflows
 
-When *many* users hit "Generate" simultaneously (think product launch or viral traffic), we need to avoid slamming FAL AI with too many concurrent requests. But workflows are isolated, so how do you share state?
+When *many* users hit "Generate" simultaneously (think product launch or viral traffic), we need to avoid slamming the model APIs with too many concurrent requests. But workflows are isolated, so how do you share state?
 
 Enter the globally-cached semaphore:
 
